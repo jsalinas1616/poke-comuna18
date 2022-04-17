@@ -53,7 +53,7 @@ export const NavbarPoke = ({
   const handleFind = (event) => {
     event.preventDefault();
     if (find !== '') {
-      const found = originData.filter((e) => e.currency === find);
+      const found = originData.filter((e) => e.currency === find.toUpperCase());
       setPokemons(found);
     } else {
       setPokemons(originData);
